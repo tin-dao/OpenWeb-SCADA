@@ -1,0 +1,19 @@
+var user = {
+
+	"general" : [
+		{
+			"email" : "example@example.com",
+			"password" : "fXGthJgTAK.LtslltpXtRK9N0yPKddsFFp7AnzxFO6NWO09PJnfMtOBzFjLlVQgBpfrQ/06h7D6xuz56bTeWN.",
+			"avatar" : "http://example.com/avatar.png",
+			"name" : "Example User"
+		}
+	],
+	
+	"permissions" : [
+		{
+			"group_name" : "Example Group",
+			"group_id" : "2"
+		}
+	]
+	
+}

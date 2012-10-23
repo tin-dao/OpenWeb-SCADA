@@ -1,0 +1,12 @@
+var clients = {
+
+	"client" : [
+		{
+			"name" : "Innkeeper Gryshka",
+			"email" : "innkeeper@orgrimmar.gov",
+			"last_time_contacted" : "08-10-2012",
+			"unique_id" : "111111_ig"
+		}
+	]
+	
+}

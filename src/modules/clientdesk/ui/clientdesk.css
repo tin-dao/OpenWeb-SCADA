@@ -1,0 +1,193 @@
+includ
+
+/* Main ClientDesk CSS - Home Page Area */
+
+	.clientdesk{
+		float: left;
+		height: 650px;
+		width: 95%;
+		min-width: 1000px;
+		margin-top: 2.5%;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+	}
+	
+	/* General CSS relating to home page */
+	
+		#generalModule_Label{
+			float: left;
+			height: 40px;
+			width: 100%;
+			background-color: #333333;
+		}
+		
+		#generalModule_Label label{
+			float: left;
+			height: 40px;
+			width: auto;
+			color: #fafafa;
+			font-family: 'Droid Sans', sans-serif;
+			font-size: 20px;
+			line-height: 40px;
+			margin-left: 10px;
+		}
+		
+		#generalModule_Label button{
+			float: right;
+			height: 32px;
+			width: 150px;
+			border: 0px;
+			background-color: #0099ff;
+			color: #fafafa;
+			font-family: 'Droid Sans', sans-serif;
+			font-size: 16px;
+			text-align: center;
+			line-height: 32px;
+		}
+		
+		/* This is more specific "general" CSS, in that it is used for the Latest Purchases and Latest Tickets
+		 * modules and potentially modules in Client Info area and on the sides of other sections.
+		 */
+	
+		.clientDesk_Home_SmallModule{
+			float: right;
+			height: 315px;
+			width: 475px;
+			background-color: #fafafa;	
+		}
+		
+		.clientDesk_Home_SmallModule_RowInfo{
+			float: left;
+			height: 40px;
+			width: 100%;
+			background-color: #eeeeee;
+		}
+		
+		#clientDesk_Home_SmallModule_RowData_First{
+			float: left;
+			height: 40px;
+			width: 140px;
+			margin-left: 10px;
+			font-family: 'Droid Sans', sans-serif;
+			font-size: 16px;
+			line-height: 40px;
+		}
+		
+		a #clientDesk_Home_SmallModule_RowData_First{
+			color: #0099ff;
+			text-decoration: none;	
+		}
+		
+		#clientDesk_Home_SmallModule_RowData_Second{
+			float: left;
+			height: 40px;
+			width: 190px;
+			color: #333333;
+			font-family: 'Droid Sans', sans-serif;
+			font-size: 16px;
+			line-height: 40px;	
+		}
+		
+		#clientList_ClientLastTime{
+			float: right;
+			height: 40px;
+			width: 85px;
+			color: #333333;
+			font-family: 'Droid Sans', sans-serif;
+			font-size: 16px;
+			margin-right: 10px;	
+		}
+		
+		.clientDesk_Home_SmallModule_Row{
+			float: left;
+			height: 40px;
+			width: 100%;
+			margin-top: 5px;
+		}
+		
+		/* End of more "specific" general (irony, right?) CSS that is for side modules of Latest Purchases...blah blah blah 
+		 * just look at the comment above the CSS, thanks.
+		 */
+		
+	/* End of General CSS relating to home page */
+
+	/* This is the module that lists the Clients on the home page */
+	
+		#clientList{
+			float: left;
+			height: 650px;
+			width: 75%;
+			min-width: 800px;
+			background-color: #fafafa;	
+		}
+
+		.clientList_RowInfo{
+			float: left;
+			height: 40px;
+			width: 100%;
+			background-color: #eeeeee;
+		}
+		
+		#clientList_ClientName{
+			float: left;
+			height: 40px;
+			width: 300px;
+			margin-left: 10px;
+			font-family: 'Droid Sans', sans-serif;
+			font-size: 16px;
+			line-height: 40px;
+		}
+		
+		label #clientList_ClientName{
+			color: #333333;
+		}
+		
+		a #clientList_ClientName{
+			color: #0099ff;
+			text-decoration: none;	
+		}
+		
+		#clientList_ClientEmail{
+			float: left;
+			height: 40px;
+			width: 250px;
+			font-family: 'Droid Sans', sans-serif;
+			font-size: 16px;
+			line-height: 40px;
+		}
+		
+		label #clientList_ClientEmail{
+			color: #333333;
+		}
+		
+		a #clientList_ClientEmail{
+			color: #0099ff;
+			text-decoration: none;	
+		}
+		
+		#clientList_ClientLastTime{
+			float: right;
+			height: 40px;
+			width: 140px;
+			color: #333333;
+			font-family: 'Droid Sans', sans-serif;
+			font-size: 16px;
+			margin-right: 10px;	
+		}
+		
+		#clientList_Row{
+			float: left;
+			height: 40px;
+			width: 100%;
+			margin-top: 5px;
+		}
+		
+	/* This is the end of the CSS for the module that lists Clients */
+	
+/* End of Main ClientDesk CSS - Home Page Area */
+
+/* This is the CSS for the Client Info and when you're editing the Client Information */
+
+
+
+/* End of CSS for the Client Info and when you're editing the Client Information */

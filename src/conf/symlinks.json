@@ -1,0 +1,9 @@
+var symlinks = {
+
+    "clientdesk" : [
+        {
+            "name" : "ClientDesk",
+            "location" : "clientdesk/php/clientdesk.php"
+      	}
+    ]
+}
