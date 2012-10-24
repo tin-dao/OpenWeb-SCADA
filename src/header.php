@@ -8,12 +8,12 @@
     <body>
         <?php
 
-            $configContent_Encoded = file_get_contents("/conf/config.json");
-			$modulePermissions_Encoded = file_get_contents("/conf/module_permissions.json");
-			$symlinks_Encoded = file_get_contents("/conf/symlinks.json");
-            $decodedConfig = json_decode($configContent, true, 3);
-			$modulePermissions = json_decode($modulePermissions_Encoded, true, 3);
-			$symlinksList = json_decode($symlinks_Encoded, true, 3);
+            $configContent_Encoded = file_get_contents("conf/config.json");
+			$modulePermissions_Encoded = file_get_contents("conf/module_permissions.json");
+			$symlinks_Encoded = file_get_contents("conf/symlinks.json");
+            $decodedConfig = json_decode($configContent_Encoded, true);
+			$modulePermissions = json_decode($modulePermissions_Encoded, true);
+			$symlinksList = json_decode($symlinks_Encoded, true);
             
             include("Framework/framework.php");
             //include("functions/repetitiveFunctions.php");
@@ -24,8 +24,8 @@
             $ftpEnableSSL = $decodedConfig["connection"]["ftp_enable_ssl"];
             $ftpUsername = $decodedConfig["connection"]["ftp_username"];
             $ftpPassword = $decodedConfig["connection"]["ftp_password"];
-            
-			if (($ftpUsername !== "example_username") || ($ftpServer !== "")){
+
+			if ($ftpUsername !== "example_username"){
             	$ftpAccesser = atlasui_ftp_login($ftpServer, $ftpEnableSSL, $ftpUsername, $ftpPassword);
 			}
             
@@ -38,8 +38,8 @@
 
             if (isset($scadaUser)){
                 
-                $userData_Encoded = file_get_contents("/users/$scadaUser.json");
-				$userData = json_decode($userData_Encoded, true, 3);
+                $userData_Encoded = file_get_contents("users/$scadaUser.json");
+				$userData = json_decode($userData_Encoded, true);
 
 				/* Set User Variables */
 
@@ -62,8 +62,8 @@
 						
 						foreach ($installedModules as $key => $installedModule_FolderName){
 							if (substr_count($installedModule_FolderName, ".") < 1){
-								$moduleJson_Encoded = file_get_contents("/modules/$installedModule_FolderName/module.json");
-								$moduleJson = json_decode($moduleJson, true, 4);
+								$moduleJson_Encoded = file_get_contents("modules/$installedModule_FolderName/module.json");
+								$moduleJson = json_decode($moduleJson, true);
 								$moduleName = $moduleJson["module_info"]["name"];
 								$moduleAccessibility = $modulePermissions[$moduleName]["permissions"]["minimum_id"];
 								
@@ -73,7 +73,7 @@
 											$numberOfModules_OnNavigation = $numberOfModules_OnNavigation + 1;
 	
 											if ($numberOfModules_OnNavigation <= 5){
-												print "<label onclick=\"navigateToModule('/modules/$installedModule_FolderName/" . $individualFile_Details["location"] . "')\">";
+												print "<label onclick=\"navigateToModule('modules/$installedModule_FolderName/" . $individualFile_Details["location"] . "')\">";
 													print $individualFile_Details["name"];
 												print "</label>";
 											}
@@ -99,7 +99,7 @@
 					/* End of Module Detection */
             }
             else{
-                header("Location: login");
+                atlasui_redirect("login", 0.5);
             }
 
         ?>

@@ -1,13 +1,9 @@
-var modulePermissions = {
+{
 
-	"ClientDesk" : [
-		{
-			"permissions" : [
-				{
-					"minimum_id" : "2"
-				}
-			]
+	"ClientDesk" : {
+		"permissions" : {
+				"minimum_id" : "2"
 		}
-	]
+	}
 	
 }

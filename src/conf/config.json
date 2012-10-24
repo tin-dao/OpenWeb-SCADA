@@ -1,18 +1,14 @@
-var config = {
+{
 
-	"connection" : [
-		{
+	"connection" : {
 			"ftp_server" : "127.0.0.1",
 			"ftp_enable_ssl" : "false",
 			"ftp_username" : "example_username",
 			"ftp_password" : "example_password"
-		}
-	],
+	},
 	
-	"preferences" : [
-		{
+	"preferences" : {
 			"allow_registration" : "true"
-		}
-	]
+	}
 
 }
