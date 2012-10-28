@@ -1,3 +1,59 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans);
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+/* OpenWeb SCADA Header */
+
+.scadaHeader{
+	float: left;
+	height: 50px;
+	width: 100%;
+	min-width: 1000px;
+	background-color: #444444;
+	margin-bottom: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+}
+
+#scadaHeaderHome{
+	float: left;
+	height: 46px;
+	width: 240px;
+	color: #fafafa;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 20px;
+	line-height: 46px;
+	background-color: #666666;
+	margin-top: 2px;
+	margin-left: 2px;	
+	text-align: center;
+	text-decoration: none;
+}
+
+#scadaNavItem{
+	float: left;
+	height: 20px;
+	width: auto;
+	color: #fafafa;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	margin-top: 15px;
+	margin-left: 30px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* End of OpenWeb SCADA Header */
+
+/* AreaCanvas -> Module Displayer */
+
+#areaCanvas{
+	float: left;
+	height: auto;
+	width: 100%;
+	margin-top: 50px;	
+}

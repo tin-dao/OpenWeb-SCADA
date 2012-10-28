@@ -1,0 +1,76 @@
+body{
+	background-color: #fcfcfc;
+}
+
+.loginForm{
+	float: left;
+	width: 500px;
+	height: 200px;
+	margin-left: 30%;
+	margin-top: 12.5%;
+	margin-right: 30%;
+	margin-bottom: 10px;
+	border: 1px solid #eeeeee;
+	background-color: #fafafa;
+}
+
+.loginForm label{
+	width: 100%;
+	height: 32px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 32px;
+	color: #333333;
+	font-size: 19px;
+	font-family: 'Ubuntu', sans-serif;
+	text-align: center;
+	float: left;
+}
+
+.loginForm input{
+	width: 80%;
+	height: 32px;
+	border: 1px solid #eeeeee;
+	margin-left: 10%;
+	margin-bottom: 10px;
+	line-height: 32px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 14px;
+	text-indent: 5px;
+	float: left;
+}
+
+.loginForm input:focus{
+	border: 1px solid #0099ff;
+}
+
+.loginForm i{
+	margin-left: 10%;
+	width: 50%;
+	height: 32px;
+	line-height: 32px;
+	color: #333333;
+	font-size: 14px;
+	font-family: 'Ubuntu', sans-serif;
+	text-decoration: none;
+	font-weight: normal;
+	float: left;
+}
+
+#botProtection{
+	width: 20%;
+}
+
+.loginForm button{
+	float: left;
+	height: 32px;
+	width: 150px;
+	color: #fafafa;
+	font-family: 'Ubuntu', sans-serif;
+	text-align: center;
+	font-size: 16px;
+	background-color: #0099ff;
+	border: 0px;
+	margin-left: 35%;
+	margin-top: 10px;
+}

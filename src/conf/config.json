@@ -8,7 +8,8 @@
 	},
 	
 	"preferences" : {
-			"allow_registration" : "true"
+			"allow_registration" : "true",
+			"password_hash" : "0p3nw3bsc2d2"
 	}
 
 }

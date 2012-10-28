@@ -1,0 +1,48 @@
+{
+	
+	"transaction_info" : {
+		"related_client_id" : "111111",
+		"type" : "checkout",
+		"id" : "92739219",
+		"date" : "08-10-2012",
+		"amount" : "1.00",
+		"currency_code" : "EUR",
+		"status" : "CONFIRMED"
+	},
+	
+	"transaction_buyer_info" : {
+		"general" : {
+			"buyer_id" : "",
+			"buyer_name" : "Innkeeper Gryshka"
+		},
+		
+		"billing_address" : {
+			"street_name_1" : "Valley of Strength",
+			"street_name_2" : "Inn",
+			"city" : "Orgrimmar",
+			"state_or_region" : "Durotar",
+			"country" : "Kalimdor",
+			"zipcode" : ""
+		},
+		
+		"shipping_address" : {
+			"street_name_1" : "Valley of Strength",
+			"street_name_2" : "Inn",
+			"city" : "Orgrimmar",
+			"state_or_region" : "Durotar",
+			"country" : "Kalimdor",
+			"zipcode" : ""
+		},
+	},
+	
+	"transaction_items" : {
+		"item" : {
+			"item_id" : "1",
+			"name" : "Example Item",
+			"description" : "This is simply an example item / JSON data.",
+			"price" : "1.00",
+			"quantity" : "1"
+		}
+	}
+	
+}

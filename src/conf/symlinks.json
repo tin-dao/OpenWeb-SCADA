@@ -1,7 +1,19 @@
 {
-
+	"appliware" : {
+		"name" : "Appliware",
+		"displayOnNav" : "true",
+		"location" : "appliware/php/appliware.php"
+	},
+	
 	"clientdesk" : {
 		"name" : "ClientDesk",
+		"displayOnNav" : "true",
 		"location" : "clientdesk/php/clientdesk.php"
+	},
+	
+	"unidev" : {
+		"name" : "Unidev",
+		"displayOnNav" : "true",
+		"location" : "unidev/php/unidev.php"
 	}
 }

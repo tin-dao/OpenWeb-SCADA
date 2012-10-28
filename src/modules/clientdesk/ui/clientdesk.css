@@ -5,11 +5,9 @@ includ
 	.clientdesk{
 		float: left;
 		height: 650px;
-		width: 95%;
+		width: 100%;
 		min-width: 1000px;
 		margin-top: 2.5%;
-		margin-left: 2.5%;
-		margin-right: 2.5%;
 	}
 	
 	/* General CSS relating to home page */
@@ -26,7 +24,7 @@ includ
 			height: 40px;
 			width: auto;
 			color: #fafafa;
-			font-family: 'Droid Sans', sans-serif;
+			font-family: 'PT Sans', sans-serif;
 			font-size: 20px;
 			line-height: 40px;
 			margin-left: 10px;
@@ -43,18 +41,21 @@ includ
 			font-size: 16px;
 			text-align: center;
 			line-height: 32px;
-		}
+			margin-top: 4px;
+			margin-right: 4px;
+}
 		
 		/* This is more specific "general" CSS, in that it is used for the Latest Purchases and Latest Tickets
 		 * modules and potentially modules in Client Info area and on the sides of other sections.
 		 */
 	
 		.clientDesk_Home_SmallModule{
-			float: right;
+			float: left;
 			height: 315px;
-			width: 475px;
-			background-color: #fafafa;	
-		}
+			width: 30%;
+			background-color: #fafafa;
+			margin-left: 2%;
+}
 		
 		.clientDesk_Home_SmallModule_RowInfo{
 			float: left;
@@ -66,7 +67,7 @@ includ
 		#clientDesk_Home_SmallModule_RowData_First{
 			float: left;
 			height: 40px;
-			width: 140px;
+			width: 135px;
 			margin-left: 10px;
 			font-family: 'Droid Sans', sans-serif;
 			font-size: 16px;
@@ -81,14 +82,15 @@ includ
 		#clientDesk_Home_SmallModule_RowData_Second{
 			float: left;
 			height: 40px;
-			width: 190px;
+			width: 39%;
 			color: #333333;
 			font-family: 'Droid Sans', sans-serif;
 			font-size: 16px;
-			line-height: 40px;	
+			line-height: 40px;
+			overflow: hidden;	
 		}
-		
-		#clientList_ClientLastTime{
+	
+		#clientDesk_Home_SmallModule_RowData_Third{
 			float: right;
 			height: 40px;
 			width: 85px;
@@ -96,7 +98,9 @@ includ
 			font-family: 'Droid Sans', sans-serif;
 			font-size: 16px;
 			margin-right: 10px;	
+			line-height: 40px;
 		}
+		
 		
 		.clientDesk_Home_SmallModule_Row{
 			float: left;
@@ -116,8 +120,8 @@ includ
 		#clientList{
 			float: left;
 			height: 650px;
-			width: 75%;
-			min-width: 800px;
+			width: 67.5%;
+			min-width: 750px;
 			background-color: #fafafa;	
 		}
 
@@ -168,12 +172,13 @@ includ
 		#clientList_ClientLastTime{
 			float: right;
 			height: 40px;
-			width: 140px;
+			width: 150px;
 			color: #333333;
 			font-family: 'Droid Sans', sans-serif;
 			font-size: 16px;
 			margin-right: 10px;	
-		}
+			line-height: 40px;
+}
 		
 		#clientList_Row{
 			float: left;

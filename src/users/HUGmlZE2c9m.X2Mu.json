@@ -1,0 +1,15 @@
+{
+	"general" : {
+		"username" : "HUGmlZE2c9m.X2MuXFmZAYwu8WIetVpoOICO4K4ZNUCr2kz0rH3tiuR2QietONdiQZzK0",
+		"password" : "RkBSL1RKm8Wqig8zTENAzXr8O2ihsUsNNNr6lahMwus9PouKlWR1pGNOj1OKUnE4Zy8w1",
+		"avatar" : "http://example.com/avatar.png",
+		"email" : "example@example.com",
+		"name" : "Example User"
+	},
+	
+	"permissions" : {
+		"group_name" : "Example Group",
+		"group_id" : "2"
+	}
+	
+}

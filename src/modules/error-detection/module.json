@@ -1,0 +1,22 @@
+{
+
+	"module_info" : {
+		"name" : "Error Detection",
+		"description" : "Simple error detection for OpenWeb SCADA.",
+		"public_api_key" : "si1-000-002",
+		"type" : "backend",
+		"url" : "does not exist yet",
+		"version" : "1.0"
+	},
+	
+	"files" : {
+		"file" : {
+            "name" : "404",
+            "description" : "404 Error - File Not Found",
+            "location" : "http_errors/404.php",
+            "display" : "false",
+            "type" : "php"
+		}
+	}
+
+}

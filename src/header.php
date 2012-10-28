@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+    	<script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/jqueryui.js"></script>
         <link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -37,8 +38,8 @@
             $scadaUser = $_COOKIE["openweb-scada"];
 
             if (isset($scadaUser)){
-                
-                $userData_Encoded = file_get_contents("users/$scadaUser.json");
+                $userData_FileName = substr($scadaUser, 0, 16);
+                $userData_Encoded = file_get_contents("users/$userData_FileName.json");
 				$userData = json_decode($userData_Encoded, true);
 
 				/* Set User Variables */
@@ -49,54 +50,55 @@
 
 				/* End of Setting User Variables */
 
-				/* Construct Header, Module Detection, Notification System */
+				/* Construct Header from Symlinks and Create User Header */
 
 				print "<div class=\"scadaHeader\">";
-					print "<a href=\"home\" id=\"scadaHeaderHome\">OpenWeb SCADA</a>";
+					print "<a href=\"index\" id=\"scadaHeaderHome\">OpenWeb SCADA</a>";
 					
-					/* Module Detection */
+					/* Symlink Analyzing For displayOnNav=true */
 
 						$numberOfModules_OnNavigation = 0;
 						$extraModules_NavigationArray = array();
-						$installedModules = scandir("/modules");
 						
-						foreach ($installedModules as $key => $installedModule_FolderName){
-							if (substr_count($installedModule_FolderName, ".") < 1){
-								$moduleJson_Encoded = file_get_contents("modules/$installedModule_FolderName/module.json");
-								$moduleJson = json_decode($moduleJson, true);
-								$moduleName = $moduleJson["module_info"]["name"];
-								$moduleAccessibility = $modulePermissions[$moduleName]["permissions"]["minimum_id"];
-								
-								foreach ($moduleJson["files"]["file"] as $key => $individualFile_Details){
-									if ($moduleAccessibility <= $scadaUserPermission_GroupID){
-										if ($individualFile_Details["displayOnNav"] == "true"){
-											$numberOfModules_OnNavigation = $numberOfModules_OnNavigation + 1;
+						foreach ($symlinksList as $key => $symlinkList_Item){
+
+							$symlinkName = $symlinkList_Item["name"];
+							$symlinkDisplayBoolean = $symlinkList_Item["displayOnNav"];
+							$symlinkLocation = $symlinkList_Item["location"];
+
+							if ($modulePermissions[$symlinkName]["permissions"]["group_id"] <= $scadaUserPermission_GroupID){
+								if ($symlinkDisplayBoolean == "true"){
 	
-											if ($numberOfModules_OnNavigation <= 5){
-												print "<label onclick=\"navigateToModule('modules/$installedModule_FolderName/" . $individualFile_Details["location"] . "')\">";
-													print $individualFile_Details["name"];
-												print "</label>";
-											}
-											else{
-												$extraModules_NavigationArray[] = $individualFile_Details["name"] . "||/modules/$installedModule_FolderName/" . $individualFile_Details["location"] . "'\">";
-											}
-										}
+									if ($numberOfModules_OnNavigation <= 4){
+										print "<a onclick=\"areaLoader('$symlinkName')\" id=\"scadaNavItem\">";
+											print $symlinkName;
+										print "</a>";
+										$numberOfModules_OnNavigation = $numberOfModules_OnNavigation + 1;
 									}
+									else{
+										$extraModules_NavigationArray[] = $symlinkName;
+									}
+	
 								}
 							}
+
 						}
 
 						if ($numberOfModules_OnNavigation > 5){
-							print "<button onclick=\"showMore()\">";
 							print "<div class=\"showMoreNavigation\">";
-								foreach ($extraModules_NavigationArray as $key => $navigationLinkData){
-									$navigationData = explode("||", $navigationLinkData);
-									print "<a href=\"" . $navigationData["1"] . "\">" . $navigationData["0"] . "</a>";
+								foreach ($extraModules_NavigationArray as $key => $navigationLink){
+									print "<a onclick=\"areaLoader('$navigationLink')\">$navigationLink</a>";
 								}
 							print "</div>";
 						}
 
-					/* End of Module Detection */
+					/* End of symlink Analyzing */
+
+					/* User Dropdown */
+
+					/* End of User Dropdown */
+
+				print "</div>";
             }
             else{
                 atlasui_redirect("login", 0.5);

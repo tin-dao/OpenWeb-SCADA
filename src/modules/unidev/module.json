@@ -1,0 +1,39 @@
+{
+
+	"module_info" : {
+		"name" : "Unidev",
+		"description" : "Unidev is a system for deployment of platforms, internal modules, mysql table monitoring and error log / FTP log reading.",
+		"public_api_key" : "si1-003-001",
+		"type" : "both",
+		"url" : "does not exist yet",
+		"version" : "1.0"
+	},
+	
+	"files" : {
+		"file" : {
+            "name" : "unidev.css",
+            "description" : "",
+            "location" : "ui/clientdesk.css",
+            "display" : "false",
+            "type" : "css"
+		},
+		
+	    "file" : {
+			"name" : "unidev.js",
+			"description" : "",
+			"location" : "js/clientdesk.js",
+			"display" : "false",
+			"type" : "js"
+		},
+		
+	    "file" : {
+			"name" : "Unidev",
+			"description" : "Unidev Front-End",
+			"location" : "php/unidev.php",
+			"display" : "true",
+			"type" : "php"
+		}
+		
+	}
+
+}
